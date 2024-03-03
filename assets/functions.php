@@ -46,7 +46,7 @@
 		if ( is_user_logged_in() ) // in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
 		{
 						
-			wp_enqueue_script( 'tarteaucitron', plugins_url( '/tarteaucitron/tarteaucitron.js', __FILE__) );
+			wp_enqueue_script( 'tarteaucitron', plugins_url( '/tarteaucitron/tarteaucitron.js', __FILE__) ); //Il est donc nécessaire de créer un répertoire /tarteaucitron/ dans /assets/ qui contiendra tarteaucitron.js voir https://github.com/AmauriC/tarteaucitron.js
 			
 			wp_enqueue_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__)); //On charge les paramètres
 			
