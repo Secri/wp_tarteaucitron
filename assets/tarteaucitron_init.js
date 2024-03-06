@@ -51,6 +51,6 @@ tarteaucitron.init({
 });
 
 /***** HANDLE GA4 *****/
-tarteaucitron.user.gtagUa = 'G-XXXXXXXXX';
+tarteaucitron.user.gtagUa = 'G-MJ7EC5VL60';
 tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
 (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
