@@ -43,7 +43,7 @@
 		wp_localize_script('tarteaucitron_param', 'privacy_policy_page_url', [$currentPolicyUrl]);
 		
 		
-		if ( is_user_logged_in() ) // in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
+		if ( is_user_logged_in() ) // ATTENTION structure conditionnelle de test, in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
 		{
 						
 			wp_enqueue_script( 'tarteaucitron', plugins_url( '/tarteaucitron/tarteaucitron.js', __FILE__) ); //Il est donc nécessaire de créer un répertoire /tarteaucitron/ dans /assets/ qui contiendra tarteaucitron.js voir https://github.com/AmauriC/tarteaucitron.js
