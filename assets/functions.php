@@ -8,7 +8,7 @@
 		/*** handle PLL language ***/
 		$defaultLang = function_exists('pll_default_language') ? pll_default_language() : false;
 		
-		$currentLang = function_exists('pll_current_language') ? pll_current_language() : false; //Ne fonctionne qu'en frontend !
+		$currentLang = function_exists('pll_current_language') ? pll_current_language() : false;
 		
 		$currentPolicyUrl = '';
 	
