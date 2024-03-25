@@ -5,7 +5,7 @@
 		
 		wp_register_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__)); //On register le script tarteaucitron_init.js
 		
-		/*** handle PLL language ***/
+		/*** On utilise les fonctions de Polylang pour récupérer la langue courante et ainsi connaître l'URL de la page des mentions légales ***/
 		$defaultLang = function_exists('pll_default_language') ? pll_default_language() : false;
 		
 		$currentLang = function_exists('pll_current_language') ? pll_current_language() : false;
