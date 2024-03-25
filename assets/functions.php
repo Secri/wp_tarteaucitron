@@ -2,7 +2,8 @@
 
 	function loadTarteaucitron()
 	{
-		
+
+		/******************************************* GESTION MULTILINGUE FACULTATIVE **********************************************************/
 		wp_register_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__)); //On register le script tarteaucitron_init.js
 		
 		/*** On utilise les fonctions de Polylang pour récupérer la langue courante et ainsi connaître l'URL de la page des mentions légales ***/
@@ -41,7 +42,7 @@
 		}
 		
 		wp_localize_script('tarteaucitron_param', 'privacy_policy_page_url', [$currentPolicyUrl]); //On passe l'URL de la page des mentions légales dans la langue courante
-		
+		/******************************************* GESTION MULTILINGUE FACULTATIVE **********************************************************/
 		
 		if ( is_user_logged_in() ) // ATTENTION structure conditionnelle de test, in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
 		{
