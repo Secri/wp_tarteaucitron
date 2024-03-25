@@ -3,7 +3,7 @@
 	function loadTarteaucitron()
 	{
 		
-		wp_register_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__));
+		wp_register_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__)); //On register le script tarteaucitron_init.js
 		
 		/*** handle PLL language ***/
 		$defaultLang = function_exists('pll_default_language') ? pll_default_language() : false;
@@ -40,7 +40,7 @@
 		
 		}
 		
-		wp_localize_script('tarteaucitron_param', 'privacy_policy_page_url', [$currentPolicyUrl]);
+		wp_localize_script('tarteaucitron_param', 'privacy_policy_page_url', [$currentPolicyUrl]); //On passe l'URL de la page des mentions légales dans la langue courante
 		
 		
 		if ( is_user_logged_in() ) // ATTENTION structure conditionnelle de test, in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
@@ -50,8 +50,8 @@
 			
 			wp_enqueue_script('tarteaucitron_param', plugins_url('tarteaucitron_init.js', __FILE__)); //On charge les paramètres
 			
-			wp_enqueue_style('tarteaucitron_css', plugins_url('custom.css', __FILE__));
+			wp_enqueue_style('tarteaucitron_css', plugins_url('custom.css', __FILE__)); //On charge les styles custom (voir paramètre correspondant dans tarteaucitron_init.js
 		}
 	}
 	
-	add_action('wp_enqueue_scripts', 'loadTarteaucitron', 99); //On hook sur wp_enqueue_scripts et on met la priorité maximale
+	add_action('wp_enqueue_scripts', 'loadTarteaucitron', 99); //On hook sur wp_enqueue_scripts et on met la priorité minimale
