@@ -42,7 +42,7 @@
 		}
 		
 		wp_localize_script('tarteaucitron_param', 'privacy_policy_page_url', [$currentPolicyUrl]); //On passe l'URL de la page des mentions légales dans la langue courante
-		/******************************************* GESTION MULTILINGUE FACULTATIVE **********************************************************/
+		/******************************************* FIN GESTION MULTILINGUE FACULTATIVE **********************************************************/
 		
 		if ( is_user_logged_in() ) // ATTENTION structure conditionnelle de test, in fine utiliser la structure conditionnelle suivante if ( ! is_user_logged_in() )
 		{
